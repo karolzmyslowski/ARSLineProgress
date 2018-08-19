@@ -15,6 +15,8 @@ enum ARSStatusType {
 	case fail
 }
 
+// test
+
 final class ARSStatus: ARSLoader {
 	
 	@objc var emptyView = UIView()
