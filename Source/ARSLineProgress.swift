@@ -18,17 +18,16 @@ public final class ARSLineProgress: NSObject {
     
     // MARK: Show Statuses
     
-    
-    /** 
-        Will interrupt the current .Infinite loader progress and show success animation instead.
-    */
+    /**
+     Will interrupt the current .Infinite loader progress and show success animation instead.
+     */
     public static func showSuccess() {
         if !statusShown { ARSStatus.show(.success) }
     }
     
     /**
-        Will interrupt the current .Infinite loader progress and show fail animation instead.
-    */
+     Will interrupt the current .Infinite loader progress and show fail animation instead.
+     */
     public static func showFail() {
         if !statusShown { ARSStatus.show(.fail) }
     }
@@ -58,28 +57,28 @@ public final class ARSLineProgress: NSObject {
     
     
     /**
-		Note: initialValue should be from 0 to 100
-    */
+     Note: initialValue should be from 0 to 100
+     */
     public static func showWithProgress(initialValue value: CGFloat) {
         if !shown { ARSProgressLoader().ars_showWithValue(value, onView: nil, progress: nil, completionBlock: nil) }
     }
     
     /**
-        Note: initialValue should be from 0 to 100
+     Note: initialValue should be from 0 to 100
      */
     public static func showWithProgress(initialValue value: CGFloat, onView: UIView) {
         if !shown { ARSProgressLoader().ars_showWithValue(value, onView: onView, progress: nil, completionBlock: nil) }
     }
     
     /**
-        Note: initialValue should be from 0 to 100
+     Note: initialValue should be from 0 to 100
      */
     public static func showWithProgress(initialValue value: CGFloat, completionBlock: (() -> Void)?) {
         if !shown { ARSProgressLoader().ars_showWithValue(value, onView: nil, progress: nil, completionBlock: completionBlock) }
     }
     
     /**
-        Note: initialValue should be from 0 to 100
+     Note: initialValue should be from 0 to 100
      */
     public static func showWithProgress(initialValue value: CGFloat, onView: UIView, completionBlock: (() -> Void)?) {
         if !shown { ARSProgressLoader().ars_showWithValue(value, onView: onView, progress: nil, completionBlock: completionBlock) }
@@ -120,7 +119,7 @@ public final class ARSLineProgress: NSObject {
     
     // MARK: Hide Loader
     
-	
+    
     public static func hide() {
         ars_hideLoader(ars_currentLoader, withCompletionBlock: nil)
     }
