@@ -47,8 +47,9 @@ func ars_window() -> UIWindow? {
     } else {
         bounds = view!.bounds
     }
-    
-    center = CGPoint(x: bounds.midX, y: bounds.midY)
+    let x = ars_config.deviationFromCenterX
+    let y = ars_config.deviationFromCenterY
+    center = CGPoint(x: bounds.midX + x, y: bounds.midY + y)
     
     let sideLengths = ARS_BACKGROUND_VIEW_SIDE_LENGTH
     

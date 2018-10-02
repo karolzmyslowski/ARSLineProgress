@@ -58,18 +58,18 @@ final class ViewController: UIViewController {
         progressObject = Progress(totalUnitCount: 100)
         ARSLineProgress.showWithProgressObject(progressObject!, completionBlock: {
             print("Success completion block")
-            ARSLineProgressConfiguration.restoreDefaults()
+//            ARSLineProgressConfiguration.restoreDefaults()
         })
         
         progressDemoHelper(success: true)
     }
     
     @IBAction func didTapShowSuccessButton(_ sender: AnyObject) {
-        ARSLineProgress.showSuccess()
+        ARSLineProgress.showSuccess(withHide: false)
     }
     
     @IBAction func didTapShowFailButton(_ sender: AnyObject) {
-        ARSLineProgress.showFail()
+        ARSLineProgress.showFail(withHide: false)
 	}
 	
 	@IBAction func showFullBackgroundLoader(_ sender: AnyObject) {
@@ -87,7 +87,7 @@ final class ViewController: UIViewController {
 			ARSLineProgress.hideWithCompletionBlock({ () -> Void in
 				print("Hidden with completion block")
 				
-				ARSLineProgressConfiguration.restoreDefaults()
+//                ARSLineProgressConfiguration.restoreDefaults()
 			})
 		})
 	}

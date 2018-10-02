@@ -46,4 +46,7 @@ final public class ARSLineProgressConfiguration: NSObject {
     public static var failCircleLineWidth: CGFloat = 2.0
     public static var failCircleColor: CGColor = UIColor.ars_colorWithRGB(255.0, green: 255.0, blue: 0.0, alpha: 1.0).cgColor
     
+    public static var deviationFromCenterX: CGFloat = 0
+    public static var deviationFromCenterY: CGFloat = 0
+    
 }

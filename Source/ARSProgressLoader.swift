@@ -188,7 +188,7 @@ extension ARSProgressLoader {
         
         ars_dispatchAfter(0.9) {
             if ARSLineProgressConfiguration.showSuccessCheckmark {
-                ARSStatus.show(.success)
+                ARSStatus.show(.success, withHide: true)
                 
                 let dismissDelay = 0.5 + max(ARSLineProgressConfiguration.successCircleAnimationDrawDuration, ARSLineProgressConfiguration.checkmarkAnimationDrawDuration)
                 
@@ -202,7 +202,7 @@ extension ARSProgressLoader {
     }
     
     func ars_failedLoading() {
-        ARSStatus.show(.fail)
+        ARSStatus.show(.fail, withHide: false)
         let dismissDelay = 0.5 + max(ARSLineProgressConfiguration.failCircleAnimationDrawDuration, ARSLineProgressConfiguration.failCrossAnimationDrawDuration)
         
         ars_dispatchAfter(dismissDelay) {
