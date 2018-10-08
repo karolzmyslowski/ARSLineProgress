@@ -118,10 +118,10 @@ extension ARSProgressLoader {
             ARSProgressLoader.weakSelf = nil
             multiplier = 0.01
             ars_drawCirclePath()
-            ars_failedLoading()
+//            ars_failedLoading()
         } else if multiplier >= 100 {
             ARSProgressLoader.weakSelf = nil
-            ars_completed()
+//            ars_completed()
         }
     }
     
