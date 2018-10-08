@@ -188,10 +188,10 @@ extension ARSProgressLoader {
         
         ars_dispatchAfter(0.9) {
             if ARSLineProgressConfiguration.showSuccessCheckmark {
-                ARSStatus.show(.success, withHide: true)
-                
+                ARSStatus.show(.success, withHide: false)
+
                 let dismissDelay = 0.5 + max(ARSLineProgressConfiguration.successCircleAnimationDrawDuration, ARSLineProgressConfiguration.checkmarkAnimationDrawDuration)
-                
+
                 ars_dispatchAfter(dismissDelay) {
 //                    ars_hideLoader(ars_currentLoader, withCompletionBlock: ars_currentCompletionBlock)
                 }
