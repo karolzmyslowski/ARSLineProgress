@@ -118,10 +118,10 @@ extension ARSProgressLoader {
             ARSProgressLoader.weakSelf = nil
             multiplier = 0.01
             ars_drawCirclePath()
-//            ars_failedLoading()
+            ars_failedLoading()
         } else if multiplier >= 100 {
             ARSProgressLoader.weakSelf = nil
-//            ars_completed()
+            ars_completed()
         }
     }
     
@@ -186,19 +186,19 @@ extension ARSProgressLoader {
         CATransaction.commit()
         CATransaction.commit()
         
-        ars_dispatchAfter(0.9) {
-            if ARSLineProgressConfiguration.showSuccessCheckmark {
-                ARSStatus.show(.success, withHide: false)
-
-                let dismissDelay = 0.5 + max(ARSLineProgressConfiguration.successCircleAnimationDrawDuration, ARSLineProgressConfiguration.checkmarkAnimationDrawDuration)
-
-                ars_dispatchAfter(dismissDelay) {
+//        ars_dispatchAfter(0.9) {
+//            if ARSLineProgressConfiguration.showSuccessCheckmark {
+//                ARSStatus.show(.success, withHide: false)
+//
+//                let dismissDelay = 0.5 + max(ARSLineProgressConfiguration.successCircleAnimationDrawDuration, ARSLineProgressConfiguration.checkmarkAnimationDrawDuration)
+//
+//                ars_dispatchAfter(dismissDelay) {
 //                    ars_hideLoader(ars_currentLoader, withCompletionBlock: ars_currentCompletionBlock)
-                }
-            } else {
+//                }
+//            } else {
 //                ars_hideLoader(ars_currentLoader, withCompletionBlock: ars_currentCompletionBlock)
-            }
-        }
+//            }
+//        }
     }
     
     func ars_failedLoading() {
